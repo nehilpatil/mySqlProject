@@ -1,0 +1,20 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Banner Project</title>
+</head>
+<body>
+    <% if (banner.visible) { %>
+        <div id="banner">
+            <p><%= banner.description %></p>
+            <a href="<%= banner.link %>">Click here</a>
+            <p>Banner disappears in <span id="timer"><%= banner.timer %></span> seconds</p>
+        </div>
+    <% } %>
+    <script src="/scripts.js"></script>
+</body>
+</html>
